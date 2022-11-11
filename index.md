@@ -20,7 +20,7 @@ collaborative_notes: https://pad.carpentries.org/2022-12-01-planck_academy-onlin
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
 
-{% comment %} See instructions in the comments below for how to edit specific sections of thiselifdy@auburn.edu , ""workshop template. {% endcomment %}
+{% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
 
 {% comment %}
 HEADER
