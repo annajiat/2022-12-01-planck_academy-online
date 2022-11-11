@@ -14,7 +14,7 @@ humantime: "10 am - 4 pm CEST<br>(8 am - 2 pm UTC<br>2 pm - 8 pm BDT)"    # huma
 startdate: 2022-12-01      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 2022-12-02        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
 instructor: ["Rohit Goswami", "Annajiat Alim Rasel", "Elif Dede Yildirim", "Brian Gue"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["ora Molloy", "Alexander Krug"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+helper: ["Cora Molloy", "Alexander Krug"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 email: ["cm@mpifg.de", "rog32@hi.is", "annajiat@gmail.com","elifdy@auburn.edu", "bmgue@pcl.com", "krug@coll.mpg.de"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes: https://pad.carpentries.org/2022-12-01-planck_academy-online  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
