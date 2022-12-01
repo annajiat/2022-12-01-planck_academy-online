@@ -1,209 +1,431 @@
-{% comment %}
-This is the typical schedule for the Data Carpentry workshops.
-The schedule for the different curricula are listed here:
-- dc-astronomy
-- dc-ecology
-- dc-genomics
-- dc-socsci
-- dc-geosptial
-{% endcomment %}
-
-{% if site.curriculum == "dc-astronomy" %}
-<div class="row">
-  <div class="col-md-6">
-    <h3>Day 1</h3>
-    <table class="table table-striped">
-      <tr>
-	<td>Before starting</td>
-	<td><a href="{{ site.pre_survey }}{{ site.github.project_title }}" target="_blank">Pre-workshop survey</a></td>
-      </tr>
-      <tr><td>Morning</td> <td> <a href="https://datacarpentry.org/astronomy-python/01-query/">Basic Queries</a></td></tr>
-      <tr><td> </td><td><a href="https://datacarpentry.org/astronomy-python/02-coords/">Coordinate Transformations</a></td></tr>
-      <tr><td>Afternoon</td> <td> <a href="https://datacarpentry.org/astronomy-python/03-transform/">Plotting and Tabular Data</a></td></tr>
-      <tr><td> </td> <td> <a href="https://datacarpentry.org/astronomy-python/04-motion/">Plotting and Pandas</a></td></tr>
-    </table>
-  </div>
-  <div class="col-md-6">
-    <h3>Day 2</h3>
-    <table class="table table-striped">
-      <tr><td>Morning</td><td><a href="https://datacarpentry.org/astronomy-python/05-select/">Transform and Select</a></td></tr>
-      <tr><td> </td> <td> <a href="https://datacarpentry.org/astronomy-python/06-join/">Join</a></td></tr>
-      <tr><td>Afternoon</td><td><a href="https://datacarpentry.org/astronomy-python/07-photo/">Photometry</a></td></tr>
-      <tr><td> </td><td><a href="https://datacarpentry.org/astronomy-python/08-plot/">Visualization</a></td></tr>
-    </table>
-  </div>
-</div>
-
-{% elsif site.curriculum == "dc-ecology" %}
-<div class="row">
-  <div class="col-md-6">
-    <h3>Day 1</h3>
-    <table class="table table-striped">
-      <tr>
-	<td>Before starting</td>
-	<td><a href="{{ site.pre_survey }}{{ site.github.project_title }}" target="_blank">Pre-workshop survey</a></td>
-      </tr>
-      <tr><td>Morning</td> <td> <a href="https://datacarpentry.org/spreadsheet-ecology-lesson/">Data Organization in Spreadsheets</a></td></tr>
-      <tr><td> </td><td><a href="https://datacarpentry.org/OpenRefine-ecology-lesson/">OpenRefine for Data Cleaning</a></td></tr>
-      <tr>
-        <td>Afternoon</td>
-        <td>
-          {% if site.flavor == "r" %}
-          <a href="https://datacarpentry.org/R-ecology-lesson/">Introduction to R</a>
-          {% elsif site.flavor == "python" %}
-          <a href="https://datacarpentry.org/python-ecology-lesson/">Introduction to Python</a>
-          {% else %}
-          {% include warning-flavor.html %}
-          {% endif %}
-      </td></tr>
-      <tr> <td>Evening</td> <td>END</td> </tr>
-    </table>
-  </div>
-  <div class="col-md-6">
-    <h3>Day 2</h3>
-    <table class="table table-striped">
-      <tr> <td>Morning</td>
-        <td>
-          {% if site.flavor == "r" %}
-          <a href="https://datacarpentry.org/R-ecology-lesson/">Continuation of R: Data analysis and Visualization</a>
-          {% elsif site.flavor == "python" %}
-          <a href="https://datacarpentry.org/python-ecology-lesson/">Continuation of Python: Data analysis and Visualization</a>
-          {% else %}
-          {% include warning-flavor.html %}
-          {% endif %}
-        </td>
-      </tr>
-      <tr> <td>Afternoon</td><td><a href="https://datacarpentry.org/sql-ecology-lesson/">Data Management with SQL</a></td></tr>
-      <tr>
-	<td>Evening</td>
-	<td><a href="{{ site.post_survey }}{{ site.github.project_title }}" target="_blank">Post-workshop survey</a></td>
-      </tr>
-      <tr>
-	<td> </td>
-	<td> END </td>
-      </tr>
-    </table>
-  </div>
-</div>
-
-{% elsif site.curriculum == "dc-genomics" %}
-
-<div class="row">
-  <div class="col-md-6">
-    <h3>Day 1</h3>
-    <table class="table table-striped">
-      <tr>
-	<td>Before starting</td>
-	<td><a href="{{ site.pre_survey }}{{ site.github.project_title }}" target="_blank">Pre-workshop survey</a></td>
-      </tr>
-      <tr><td>Morning</td> <td> <a href="https://datacarpentry.org/organization-genomics/">Project Organization and Management</a></td></tr>
-      <tr><td> </td><td><a href="https://datacarpentry.org/shell-genomics/">Introduction to the Command Line</a></td></tr>
-      <tr><td>Afternoon</td><td><a href="https://datacarpentry.org/wrangling-genomics/">Data Wrangling and Processing</a></td></tr>
-			<tr> <td>Evening</td> <td>END</td> </tr>
-    </table>
-  </div>
-  <div class="col-md-6">
-    <h3>Day 2</h3>
-    <table class="table table-striped">
-			<tr><td>Morning</td><td><a href="https://datacarpentry.org/wrangling-genomics/">Continuation: Data Wrangling and Processing</a></td></tr>
-			<tr><td>Afternoon</td><td><a href="https://datacarpentry.org/cloud-genomics/">Introduction to Cloud Computing for Genomics</a></td></tr>
-      <tr>
-	<td>Evening</td>
-	<td><a href="{{ site.post_survey }}{{ site.github.project_title }}" target="_blank">Post-workshop survey</a></td>
-      </tr>
-      <tr>
-	<td> </td>
-	<td> END </td>
-      </tr>
-    </table>
-  </div>
-</div>
-
-{% elsif site.curriculum == "dc-socsci" %}
-
-<div class="row">
-  <div class="col-md-6">
-    <h3>Day 1</h3>
-    <table class="table table-striped">
-      <tr>
-	<td>Before starting</td>
-	<td><a href="{{ site.pre_survey }}{{ site.github.project_title }}" target="_blank">Pre-workshop survey</a></td>
-      </tr>
-      <tr><td>Morning</td> <td> <a href="https://datacarpentry.org/spreadsheets-socialsci/">Data Organization in Spreadsheets</a></td></tr>
-      <tr><td> </td><td><a href="https://datacarpentry.org/openrefine-socialsci/">OpenRefine for Data Cleaning</a></td></tr>
-      <tr><td>Afternoon</td><td><a href="https://datacarpentry.org/r-socialsci/">Introduction to R</a></td></tr>
-      <tr> <td>Evening</td> <td>END</td> </tr>
-    </table>
-  </div>
-  <div class="col-md-6">
-    <h3>Day 2</h3>
-    <table class="table table-striped">
-      <tr> <td>Morning</td> <td><a href="https://datacarpentry.org/r-socialsci/">Continuation of R: Data Analysis & Visualization</a></td></tr>
-      <tr> <td>Afternoon</td><td><a href="https://datacarpentry.org/sql-socialsci/">Data Management with SQL</a></td></tr>
-      <tr>
-	<td>Evening</td>
-	<td><a href="{{ site.post_survey }}{{ site.github.project_title }}" target="_blank">Post-workshop survey</a></td>
-      </tr>
-      <tr>
-	<td> </td>
-	<td> END </td>
-      </tr>
-    </table>
-  </div>
-</div>
-
-
-{% elsif site.curriculum == "dc-geospatial" %}
-
-<div class="row">
-  <div class="col-md-6">
-    <h3>Day 1</h3>
-    <table class="table table-striped">
-      <tr>
-	<td>Before starting</td>
-	<td><a href="{{ site.pre_survey }}{{ site.github.project_title }}" target="_blank">Pre-workshop survey</a></td>
-      </tr>
-      <tr>
-        <td>Morning</td>
-        <td><a href="https://datacarpentry.org/organization-geospatial/">Introduction to Geospatial Concepts</a>
-        </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td><a href="https://datacarpentry.org/r-intro-geospatial/">Introduction to R for Geospatial Data</a></td>
-      </tr>
-      <tr>
-        <td>Afternoon</td>
-        <td><a href="https://datacarpentry.org/r-intro-geospatial/">Introduction to R for Geospatial Data (continued)</a></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><a href="https://datacarpentry.org/r-raster-vector-geospatial/">Introduction to Geospatial Raster and Vector Data with R</a> (Part 1)</td>
-      </tr>
-      <tr>
-        <td>Evening</td>
-        <td>END</td>
-      </tr>
-    </table>
-  </div>
-
-  <div class="col-md-6">
-    <h3>Day 2</h3>
-    <table class="table table-striped">
-      <tr> <td>Morning</td> <td><a href="https://datacarpentry.org/r-raster-vector-geospatial/">Introduction to Geospatial Raster and Vector Data with R</a> (Part 2)</td></tr>
-      <tr> <td>Afternoon</td><td><a href="https://datacarpentry.org/r-raster-vector-geospatial/">Introduction to Geospatial Raster and Vector Data with R</a> (Part 3)</td></tr>
-      <tr>
-	<td>Evening</td>
-	<td><a href="{{ site.post_survey }}{{ site.github.project_title }}" target="_blank">Post-workshop survey</a></td>
-      </tr>
-      <tr>
-	<td> </td>
-	<td> END </td>
-      </tr>
-    </table>
-  </div>
-</div>
-
-{% else %}
-{% include warning-curriculum.html %}
-{% endif %}
+<p class="MsoNormal"><b><span style="font-size:18.0pt">Estimated Schedule
+<u></u><u></u></span></b></p>
+<p class="MsoNormal"><span style="font-size:18.0pt"><u></u>&nbsp;<u></u></span></p>
+<p class="MsoNormal"><span style="font-size:18.0pt">December 1st, 2022<u></u><u></u></span></p>
+<p class="MsoNormal"><span style="font-size:18.0pt"><u></u>&nbsp;<u></u></span></p>
+<table border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse">
+<tbody>
+<tr>
+<td width="57" valign="top" style="width:42.55pt;border:solid #f7caac 1.0pt;border-bottom:solid #f4b083 1.5pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span lang="DE">Time<u></u><u></u></span></b></p>
+</td>
+<td width="115" valign="top" style="width:86.1pt;border-top:solid #f7caac 1.0pt;border-left:none;border-bottom:solid #f4b083 1.5pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span lang="DE">Topic<u></u><u></u></span></b></p>
+</td>
+<td width="170" valign="top" style="width:127.55pt;border-top:solid #f7caac 1.0pt;border-left:none;border-bottom:solid #f4b083 1.5pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span>Comment<u></u><u></u></span></b></p>
+</td>
+<td width="143" valign="top" style="width:107.35pt;border-top:solid #f7caac 1.0pt;border-left:none;border-bottom:solid #f4b083 1.5pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span>Instructor<u></u><u></u></span></b></p>
+</td>
+<td width="119" valign="top" style="width:89.55pt;border-top:solid #f7caac 1.0pt;border-left:none;border-bottom:solid #f4b083 1.5pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span><u></u>&nbsp;<u></u></span></b></p>
+</td>
+</tr>
+<tr>
+<td width="57" valign="top" style="width:42.55pt;border:solid #f7caac 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span lang="DE">&nbsp;<u></u><u></u></span></b></p>
+</td>
+<td width="115" valign="top" style="width:86.1pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span lang="DE"><a href="https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/setup.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2DvYO7sLMw$" title="https://datacarpentry.org/python-socialsci/setup.html" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/setup.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2DvYO7sLMw$&amp;source=gmail&amp;ust=1669969067562000&amp;usg=AOvVaw0kciMnfZS2fs5iIk_wwxlH"><span>Setup</span>
+[datacarpentry.org]</a></span><span lang="DE"><u></u><u></u></span></p>
+</td>
+<td width="170" valign="top" style="width:127.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>Download files required for the lesson<u></u><u></u></span></p>
+</td>
+<td width="143" valign="top" style="width:107.35pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+</td>
+<td width="119" valign="top" style="width:89.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+</td>
+</tr>
+<tr>
+<td width="57" valign="top" style="width:42.55pt;border:solid #f7caac 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span>9:30<u></u><u></u></span></b></p>
+</td>
+<td width="115" valign="top" style="width:86.1pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal">Zoom Room opens<u></u><u></u></p>
+</td>
+<td width="170" valign="top" style="width:127.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+</td>
+<td width="143" valign="top" style="width:107.35pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+</td>
+<td width="119" valign="top" style="width:89.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+</td>
+</tr>
+<tr>
+<td width="57" valign="top" style="width:42.55pt;border:solid #f7caac 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span lang="DE">10:00 CET<u></u><u></u></span></b></p>
+</td>
+<td width="115" valign="top" style="width:86.1pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span lang="DE">1. </span><span lang="DE"><a href="https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/01-introduction/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2Ds92bCSXQ$" title="https://datacarpentry.org/python-socialsci/01-introduction/index.html" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/01-introduction/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2Ds92bCSXQ$&amp;source=gmail&amp;ust=1669969067562000&amp;usg=AOvVaw3NEKqM8vQFeotlE7P96xEo"><span>Introduction
+to Python </span>[datacarpentry.org]</a></span><span lang="DE"><u></u><u></u></span></p>
+</td>
+<td width="170" valign="top" style="width:127.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>Why learn Python? <u></u>
+<u></u></span></p>
+<p class="MsoNormal"><span>What are Jupyter notebooks?
+<u></u><u></u></span></p>
+</td>
+<td width="143" valign="top" style="width:107.35pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>Annajiat<u></u><u></u></span></p>
+</td>
+<td width="119" valign="top" style="width:89.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+</td>
+</tr>
+<tr>
+<td width="57" valign="top" style="width:42.55pt;border:solid #f7caac 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span lang="DE">10:15<u></u><u></u></span></b></p>
+</td>
+<td width="115" valign="top" style="width:86.1pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span lang="DE">2. </span><span lang="DE"><a href="https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/02-basics/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2DtdOgpqag$" title="https://datacarpentry.org/python-socialsci/02-basics/index.html" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/02-basics/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2DtdOgpqag$&amp;source=gmail&amp;ust=1669969067562000&amp;usg=AOvVaw2wIU-4sRSh_DwemN8iYcxH"><span>Python
+basics </span>[datacarpentry.org]</a></span><span lang="DE"><u></u><u></u></span></p>
+</td>
+<td width="170" valign="top" style="width:127.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>How do I assign values to variables?
+<u></u><u></u></span></p>
+<p class="MsoNormal"><span>How do I do arithmetic?
+<u></u><u></u></span></p>
+<p class="MsoNormal"><span>What is a built-in function?
+<u></u><u></u></span></p>
+<p class="MsoNormal"><span>How do I see results? <u></u>
+<u></u></span></p>
+<p class="MsoNormal"><span>What data types are supported in Python?
+<u></u><u></u></span></p>
+</td>
+<td width="143" valign="top" style="width:107.35pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>Annajiat<u></u><u></u></span></p>
+</td>
+<td width="119" valign="top" style="width:89.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+</td>
+</tr>
+<tr>
+<td width="57" valign="top" style="width:42.55pt;border:solid #f7caac 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span lang="DE">11:10<u></u><u></u></span></b></p>
+</td>
+<td width="115" valign="top" style="width:86.1pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span lang="DE">3. </span><span lang="DE"><a href="https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/03-control-structures/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2DunduszGQ$" title="https://datacarpentry.org/python-socialsci/03-control-structures/index.html" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/03-control-structures/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2DunduszGQ$&amp;source=gmail&amp;ust=1669969067562000&amp;usg=AOvVaw3O9Ymm7ZCekEvu_IHFiuqi"><span>Python
+control structures </span>[datacarpentry.org]</a></span><span lang="DE"><u></u><u></u></span></p>
+</td>
+<td width="170" valign="top" style="width:127.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>What constructs are available for changing the flow of a program?
+<u></u><u></u></span></p>
+<p class="MsoNormal"><span>How can I repeat an action many times?
+<u></u><u></u></span></p>
+<p class="MsoNormal"><span>How can I perform the same task(s) on a set of items?
+<u></u><u></u></span></p>
+</td>
+<td width="143" valign="top" style="width:107.35pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>Annajiat<u></u><u></u></span></p>
+</td>
+<td width="119" valign="top" style="width:89.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+</td>
+</tr>
+<tr>
+<td width="57" valign="top" style="width:42.55pt;border:solid #f7caac 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span lang="DE">11:55<u></u><u></u></span></b></p>
+</td>
+<td width="115" valign="top" style="width:86.1pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span lang="DE">4. </span><span lang="DE"><a href="https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/04-reusable/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2DslWGZsCQ$" title="https://datacarpentry.org/python-socialsci/04-reusable/index.html" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/04-reusable/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2DslWGZsCQ$&amp;source=gmail&amp;ust=1669969067562000&amp;usg=AOvVaw0v-q4Fl59LAqicC8okH-41"><span>Creating
+re-usable code </span>[datacarpentry.org]</a></span><span lang="DE"><u></u><u></u></span></p>
+</td>
+<td width="170" valign="top" style="width:127.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>What are user defined functions?
+<u></u><u></u></span></p>
+<p class="MsoNormal"><span>How can I automate my code for re-use?
+<u></u><u></u></span></p>
+</td>
+<td width="143" valign="top" style="width:107.35pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>Annajiat<u></u><u></u></span></p>
+</td>
+<td width="119" valign="top" style="width:89.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+</td>
+</tr>
+<tr style="height:34.25pt">
+<td width="57" valign="top" style="width:42.55pt;border:solid #f7caac 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt;height:34.25pt">
+<p class="MsoNormal"><b><span lang="DE">12:35-13:35<u></u><u></u></span></b></p>
+</td>
+<td width="115" valign="top" style="width:86.1pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:34.25pt">
+<p class="MsoNormal"><span lang="DE">LUNCH BREAK ?</span><span><u></u><u></u></span></p>
+</td>
+<td width="170" valign="top" style="width:127.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:34.25pt">
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+</td>
+<td width="143" valign="top" style="width:107.35pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:34.25pt">
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+</td>
+<td width="119" valign="top" style="width:89.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:34.25pt">
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+</td>
+</tr>
+<tr style="height:50.45pt">
+<td width="57" valign="top" style="width:42.55pt;border:solid #f7caac 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt;height:50.45pt">
+<p class="MsoNormal"><b><span lang="DE">13:35<u></u><u></u></span></b></p>
+</td>
+<td width="115" valign="top" style="width:86.1pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:50.45pt">
+<p class="MsoNormal"><span>5. </span><span lang="DE"><a href="https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/05-processing-data-from-file/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2Dt-i7g81A$" title="https://datacarpentry.org/python-socialsci/05-processing-data-from-file/index.html" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/05-processing-data-from-file/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2Dt-i7g81A$&amp;source=gmail&amp;ust=1669969067562000&amp;usg=AOvVaw0aiEtSU8k75oxa9PB7f6ey"><span lang="EN-US">Processing
+data from a file </span>[datacarpentry.org]</a></span><span><u></u><u></u></span></p>
+</td>
+<td width="170" valign="top" style="width:127.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:50.45pt">
+<p class="MsoNormal"><span>How can I read and write files?
+<u></u><u></u></span></p>
+<p class="MsoNormal"><span>What kind of data files can I read?
+<u></u><u></u></span></p>
+</td>
+<td width="143" valign="top" style="width:107.35pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:50.45pt">
+<p class="MsoNormal"><span>Rohit<u></u><u></u></span></p>
+</td>
+<td width="119" valign="top" style="width:89.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:50.45pt">
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+</td>
+</tr>
+<tr>
+<td width="57" valign="top" style="width:42.55pt;border:solid #f7caac 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span lang="DE">13:45<u></u><u></u></span></b></p>
+</td>
+<td width="115" valign="top" style="width:86.1pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span lang="DE">6. </span><span lang="DE"><a href="https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/06-date-and-time/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2DsyNvABrQ$" title="https://datacarpentry.org/python-socialsci/06-date-and-time/index.html" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/06-date-and-time/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2DsyNvABrQ$&amp;source=gmail&amp;ust=1669969067562000&amp;usg=AOvVaw1oyx5SMYSxRqgfK2m8t5Uh"><span>Dates
+and Time </span>[datacarpentry.org]</a></span><span lang="DE"><u></u><u></u></span></p>
+</td>
+<td width="170" valign="top" style="width:127.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>How are dates and time represented in Python?
+<u></u><u></u></span></p>
+<p class="MsoNormal"><span>How can I manipulate dates and times?
+<u></u><u></u></span></p>
+</td>
+<td width="143" valign="top" style="width:107.35pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>Rohit<u></u><u></u></span></p>
+</td>
+<td width="119" valign="top" style="width:89.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+</td>
+</tr>
+<tr>
+<td width="57" valign="top" style="width:42.55pt;border:solid #f7caac 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span lang="DE">15:10<u></u><u></u></span></b></p>
+</td>
+<td width="115" valign="top" style="width:86.1pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span lang="DE">7. </span><span lang="DE"><a href="https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/07-json/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2DsRttEcNA$" title="https://datacarpentry.org/python-socialsci/07-json/index.html" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/07-json/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2DsRttEcNA$&amp;source=gmail&amp;ust=1669969067562000&amp;usg=AOvVaw2b6t-bvc5E9uC1PLXEeyIM"><span>Processing
+JSON data </span>[datacarpentry.org]</a></span><span lang="DE"><u></u><u></u></span></p>
+</td>
+<td width="170" valign="top" style="width:127.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>What is JSON format? <u></u>
+<u></u></span></p>
+<p class="MsoNormal"><span>How can I extract specific data items from a JSON record?
+<u></u><u></u></span></p>
+<p class="MsoNormal"><span>How can I convert an array of JSON record into a table?
+<u></u><u></u></span></p>
+</td>
+<td width="143" valign="top" style="width:107.35pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>Elif<u></u><u></u></span></p>
+</td>
+<td width="119" valign="top" style="width:89.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+</td>
+</tr>
+<tr>
+<td width="57" valign="top" style="width:42.55pt;border:solid #f7caac 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span lang="DE">15:55<u></u><u></u></span></b></p>
+</td>
+<td width="115" valign="top" style="width:86.1pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>8. </span><span lang="DE"><a href="https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/08-Pandas/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2DtueyasiQ$" title="https://datacarpentry.org/python-socialsci/08-Pandas/index.html" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/08-Pandas/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2DtueyasiQ$&amp;source=gmail&amp;ust=1669969067562000&amp;usg=AOvVaw0Mw9nS4E4RHIqeMXGNfiXD"><span lang="EN-US">Reading
+data from a file using Pandas </span>[datacarpentry.org]</a></span><span><u></u><u></u></span></p>
+</td>
+<td width="170" valign="top" style="width:127.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>What is Pandas? <u></u><u></u></span></p>
+<p class="MsoNormal"><span>How do I read files using Pandas?
+<u></u><u></u></span></p>
+<p class="MsoNormal"><span>What is the difference between reading files using Pandas and other methods of reading files?
+<u></u><u></u></span></p>
+</td>
+<td width="143" valign="top" style="width:107.35pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>Elif<u></u><u></u></span></p>
+</td>
+<td width="119" valign="top" style="width:89.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+<p class="MsoNormal"><span style="font-size:18.0pt">December 2nd, 2022</span><span lang="DE" style="font-size:18.0pt"><u></u><u></u></span></p>
+<p class="MsoNormal"><span style="font-size:18.0pt"><u></u>&nbsp;<u></u></span></p>
+<table border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse">
+<tbody>
+<tr>
+<td width="59" valign="top" style="width:44.6pt;border:solid #f7caac 1.0pt;border-bottom:solid #f4b083 1.5pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span lang="DE">Time<u></u><u></u></span></b></p>
+</td>
+<td width="133" valign="top" style="width:99.55pt;border-top:solid #f7caac 1.0pt;border-left:none;border-bottom:solid #f4b083 1.5pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span lang="DE">Topic<u></u><u></u></span></b></p>
+</td>
+<td width="227" valign="top" style="width:170.45pt;border-top:solid #f7caac 1.0pt;border-left:none;border-bottom:solid #f4b083 1.5pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span>Comment<u></u><u></u></span></b></p>
+</td>
+<td width="191" valign="top" style="width:143.0pt;border-top:solid #f7caac 1.0pt;border-left:none;border-bottom:solid #f4b083 1.5pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span>Instructor<u></u><u></u></span></b></p>
+</td>
+</tr>
+<tr>
+<td width="59" valign="top" style="width:44.6pt;border:solid #f7caac 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span lang="DE">10:00<u></u><u></u></span></b></p>
+</td>
+<td width="133" valign="top" style="width:99.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span lang="DE">Recap, Questions from yesterday<u></u><u></u></span></p>
+</td>
+<td width="227" valign="top" style="width:170.45pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+</td>
+<td width="191" valign="top" style="width:143.0pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>Annajiat<u></u><u></u></span></p>
+</td>
+</tr>
+<tr style="height:141.95pt">
+<td width="59" valign="top" style="width:44.6pt;border:solid #f7caac 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt;height:141.95pt">
+<p class="MsoNormal"><b><span lang="DE">10:15<u></u><u></u></span></b></p>
+</td>
+<td width="133" valign="top" style="width:99.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:141.95pt">
+<p class="MsoNormal"><span lang="DE">9. </span><span lang="DE"><a href="https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/09-extracting-data/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2Dt9kuunBg$" title="https://datacarpentry.org/python-socialsci/09-extracting-data/index.html" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/09-extracting-data/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2Dt9kuunBg$&amp;source=gmail&amp;ust=1669969067563000&amp;usg=AOvVaw2jZaXeYrd3zGsfGG2M2x7O"><span>Extracting
+row and columns </span>[datacarpentry.org]</a></span><span lang="DE"><u></u><u></u></span></p>
+</td>
+<td width="227" valign="top" style="width:170.45pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:141.95pt">
+<p class="MsoNormal"><span>How can I extract specific rows and columns from a Dataframe?
+<u></u><u></u></span></p>
+<p class="MsoNormal"><span>How can I add or delete columns from a Dataframe?
+<u></u><u></u></span></p>
+<p class="MsoNormal"><span>How can I find and change missing values in a Dataframe?
+<u></u><u></u></span></p>
+</td>
+<td width="191" valign="top" style="width:143.0pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:141.95pt">
+<p class="MsoNormal"><span>Rohit<u></u><u></u></span></p>
+</td>
+</tr>
+<tr>
+<td width="59" valign="top" style="width:44.6pt;border:solid #f7caac 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span lang="DE">10:45<u></u><u></u></span></b></p>
+</td>
+<td width="133" valign="top" style="width:99.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span lang="DE">10. </span><span lang="DE"><a href="https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/10-aggregations/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2DtrSDYzUw$" title="https://datacarpentry.org/python-socialsci/10-aggregations/index.html" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/10-aggregations/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2DtrSDYzUw$&amp;source=gmail&amp;ust=1669969067563000&amp;usg=AOvVaw0WU11nxWFd190NbjlvuIzM"><span>Data
+Aggregation using Pandas </span>[datacarpentry.org]</a></span><span lang="DE"><u></u><u></u></span></p>
+</td>
+<td width="227" valign="top" style="width:170.45pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>How can I summarise the data in a data frame?
+<u></u><u></u></span></p>
+</td>
+<td width="191" valign="top" style="width:143.0pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>Rohit<u></u><u></u></span></p>
+</td>
+</tr>
+<tr>
+<td width="59" valign="top" style="width:44.6pt;border:solid #f7caac 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span lang="DE">11:15<u></u><u></u></span></b></p>
+</td>
+<td width="133" valign="top" style="width:99.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span lang="DE">11. </span><span lang="DE"><a href="https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/11-joins/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2Du5nK7TjQ$" title="https://datacarpentry.org/python-socialsci/11-joins/index.html" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/11-joins/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2Du5nK7TjQ$&amp;source=gmail&amp;ust=1669969067563000&amp;usg=AOvVaw1_MeMNJq54VH8Kl5FlQpnY"><span>Joining
+Pandas Dataframes </span>[datacarpentry.org]</a></span><span lang="DE"><u></u><u></u></span></p>
+</td>
+<td width="227" valign="top" style="width:170.45pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>How can I join two Dataframes with a common key?
+<u></u><u></u></span></p>
+</td>
+<td width="191" valign="top" style="width:143.0pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>Elif<u></u><u></u></span></p>
+</td>
+</tr>
+<tr>
+<td width="59" valign="top" style="width:44.6pt;border:solid #f7caac 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span lang="DE">11:50<u></u><u></u></span></b></p>
+</td>
+<td width="133" valign="top" style="width:99.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>12. </span><span lang="DE"><a href="https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/12-long-and-wide/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2Dunc4vchw$" title="https://datacarpentry.org/python-socialsci/12-long-and-wide/index.html" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/12-long-and-wide/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2Dunc4vchw$&amp;source=gmail&amp;ust=1669969067563000&amp;usg=AOvVaw3z-EUHJOkbsyliHGtW-JE4"><span lang="EN-US">Wide
+and long data formats </span>[datacarpentry.org]</a></span><span><u></u><u></u></span></p>
+</td>
+<td width="227" valign="top" style="width:170.45pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>What are long and Wide formats?
+<u></u><u></u></span></p>
+<p class="MsoNormal"><span>Why would I want to change between them?
+<u></u><u></u></span></p>
+</td>
+<td width="191" valign="top" style="width:143.0pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>Elif<u></u><u></u></span></p>
+</td>
+</tr>
+<tr>
+<td width="59" valign="top" style="width:44.6pt;border:solid #f7caac 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span lang="DE">13:35<u></u><u></u></span></b></p>
+<p class="MsoNormal"><b><span lang="DE">14:35<u></u><u></u></span></b></p>
+</td>
+<td width="133" valign="top" style="width:99.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span>Lunch Break? <u></u><u></u></span></b></p>
+</td>
+<td width="227" valign="top" style="width:170.45pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+</td>
+<td width="191" valign="top" style="width:143.0pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+</td>
+</tr>
+<tr>
+<td width="59" valign="top" style="width:44.6pt;border:solid #f7caac 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span lang="DE">14:25<u></u><u></u></span></b></p>
+</td>
+<td width="133" valign="top" style="width:99.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span lang="DE">13. </span><span lang="DE"><a href="https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/13-matplotlib/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2DvK_FdHeg$" title="https://datacarpentry.org/python-socialsci/13-matplotlib/index.html" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/13-matplotlib/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2DvK_FdHeg$&amp;source=gmail&amp;ust=1669969067563000&amp;usg=AOvVaw2BcFo0DyCqtLRm-sPgxTZS"><span>Data
+visualisation using Matplotlib </span>[datacarpentry.org]</a></span><span lang="DE"><u></u><u></u></span></p>
+</td>
+<td width="227" valign="top" style="width:170.45pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>How can I create visualisations of my data?
+<u></u><u></u></span></p>
+</td>
+<td width="191" valign="top" style="width:143.0pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>Brian<u></u><u></u></span></p>
+</td>
+</tr>
+<tr>
+<td width="59" valign="top" style="width:44.6pt;border:solid #f7caac 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span lang="DE">15:15<u></u><u></u></span></b></p>
+</td>
+<td width="133" valign="top" style="width:99.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span lang="DE">14. </span><span lang="DE"><a href="https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/14-sqlite/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2Du4e50Jtw$" title="https://datacarpentry.org/python-socialsci/14-sqlite/index.html" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://urldefense.com/v3/__https:/datacarpentry.org/python-socialsci/14-sqlite/index.html__;!!EtVdcA!tdNxwuOF4HjMxtFhGhuyURY0y92sghsffnke_xjpuCY2_yVLaNanY26TlUDj2Du4e50Jtw$&amp;source=gmail&amp;ust=1669969067563000&amp;usg=AOvVaw2ltSbXjRHsKwsumETH6T3j"><span>Accessing
+SQLite Databases </span>[datacarpentry.org]</a></span><span lang="DE"><u></u><u></u></span></p>
+</td>
+<td width="227" valign="top" style="width:170.45pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>How can I access database tables using Pandas and Python?
+<u></u><u></u></span></p>
+<p class="MsoNormal"><span>What are the advantages of storing data in a database
+<u></u><u></u></span></p>
+</td>
+<td width="191" valign="top" style="width:143.0pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span>Brian<u></u><u></u></span></p>
+</td>
+</tr>
+<tr>
+<td width="59" valign="top" style="width:44.6pt;border:solid #f7caac 1.0pt;border-top:none;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><b><span lang="DE">16:15<u></u><u></u></span></b></p>
+</td>
+<td width="133" valign="top" style="width:99.55pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span lang="DE">Finish<u></u><u></u></span></p>
+</td>
+<td width="227" valign="top" style="width:170.45pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span lang="DE">&nbsp;<u></u><u></u></span></p>
+</td>
+<td width="191" valign="top" style="width:143.0pt;border-top:none;border-left:none;border-bottom:solid #f7caac 1.0pt;border-right:solid #f7caac 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class="MsoNormal"><span lang="DE"><u></u>&nbsp;<u></u></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="MsoNormal"><span><u></u>&nbsp;<u></u></span></p>
+<p class="MsoNormal"><span>The actual schedule may vary slightly depending on the topics and exercises chosen by the instructor.
+<u></u><u></u></span></p>
